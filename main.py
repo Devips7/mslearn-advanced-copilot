@@ -31,6 +31,14 @@ def countries():
     return list(data.keys())
 
 
+# New route to expose the cities of a country/region
+@app.get('/countries/{country}/cities')
+def cities(country: str):
+    if country not in data:
+        return {"error": "Country not found"}
+    return list(data[country].keys())
+
+
 @app.get('/countries/{country}/{city}/{month}')
 def monthly_average(country: str, city: str, month: str):
     return data[country][city][month]

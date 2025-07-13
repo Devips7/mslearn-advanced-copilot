@@ -5,6 +5,46 @@ Discover new ways to leverage advanced GitHub Copilot techniques within a Python
 Gain more practical experience by using this repository that contains a Python Web Application that hosts a Travel Weather API.
 
 
+## 🚀 How to Run This Project
+
+You can run this FastAPI project locally or in a container. Follow the steps below:
+
+### Option 1: Run Locally (with Python)
+
+1. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. **Start the server:**
+   ```bash
+   uvicorn main:app --reload
+   ```
+3. **Open your browser:**
+   Visit [http://localhost:8000/docs](http://localhost:8000/docs) for the interactive API documentation.
+
+### Option 2: Run with Docker
+
+1. **Build the Docker image:**
+   ```bash
+   docker build -f Dockerfile.prod -t weather-api .
+   ```
+2. **Run the container:**
+   ```bash
+   docker run -p 8000:8000 weather-api
+   ```
+3. **Open your browser:**
+   Visit [http://localhost:8000/docs](http://localhost:8000/docs) for the interactive API documentation.
+
+### Running Tests
+
+To run the tests, use:
+```bash
+pytest
+```
+
+---
+
+
 ## Requirements
 
 1. Enable your [GitHub Copilot service](https://github.com/github-copilot/signup)
